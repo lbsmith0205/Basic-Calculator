@@ -4,7 +4,7 @@ import java.awt.event.*;
 class Calculator extends WindowAdapter implements ActionListener{
     Frame f;
     Label l;
-    Button b1;
+    Button b1,b2,b3,b4,b5,b6,b7,b9,b0;
 
 
     Calculator(){
@@ -17,6 +17,18 @@ class Calculator extends WindowAdapter implements ActionListener{
 
         b1 = new Button("1");
             b1.setBounds(50,340,50,50);
+        b2 = new Button("2");
+            b2.setBounds(120,340,50,50);
+        b3 = new Button("3");
+            b3.setBounds(190,340,50,50);
+
+
+
+
+
+
+
+
 
         b1.addActionListener(this);
 
@@ -24,7 +36,7 @@ class Calculator extends WindowAdapter implements ActionListener{
 
         //adding components to frame
         f.add(l);
-        f.add(b1);
+        f.add(b1);f.add(b2);f.add(b3);
 
         f.setSize(360,500);
         f.setLayout(null);
@@ -44,6 +56,16 @@ class Calculator extends WindowAdapter implements ActionListener{
         if(e.getSource()==b1){
             zt = l.getText();
             z = zt +"1";
+            l.setText(z);
+        }
+        if(e.getSource()==b2){
+            zt = l.getText();
+            z = zt +"2";
+            l.setText(z);
+        }
+        if(e.getSource()==b3){
+            zt = l.getText();
+            z = zt +"3";
             l.setText(z);
         }
 
